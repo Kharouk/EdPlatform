@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import Header from './components/Header';
 import VideoList from './components/VideoList';
 import SearchInput from './components/SearchInput';
 
@@ -19,7 +20,7 @@ export default function App() {
 
   useEffect(() => {
     getAllVideos()
-      .then((data) => setVideos(data.slice(0, 5)))
+      .then((data) => setVideos(data))
       .finally(() => setLoading(false));
   }, []);
 
@@ -29,14 +30,13 @@ export default function App() {
     } else if (searchTags) {
       return getTopRatedTutorialsForTags(videos, searchTags);
     } else {
-      return videos;
+      return videos.slice(0, 100);
     }
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Meet the new you.</Text>
-      <Image source={'../assets/onlineLearning.svg'} />
+      <Header />
       <SearchInput
         searchData={searchData}
         searchTags={searchTags}
@@ -64,10 +64,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-  },
-  header: {
-    fontSize: 28,
-    paddingTop: '5%',
-    paddingBottom: '5%',
   },
 });

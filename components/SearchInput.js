@@ -10,7 +10,7 @@ export default function SearchInput({
   return (
     <View style={styles.searchSection}>
       <View>
-        <Text style={styles.searchTextHeaders}>Search based on tag:</Text>
+        <Text>Search based on tag:</Text>
         <TextInput
           style={styles.input}
           text={searchTags}
@@ -19,9 +19,7 @@ export default function SearchInput({
         />
       </View>
       <View>
-        <Text style={styles.searchTextHeaders}>
-          Search by Teacher or Lesson Name:
-        </Text>
+        <Text>Search by Teacher or Lesson Name:</Text>
         <TextInput
           style={styles.input}
           text={searchData}
@@ -41,14 +39,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
   },
   searchSection: {
-    // flexDirection: 'row',
     display: 'flex',
     alignItems: 'flex-start',
     textAlign: 'center',
     paddingBottom: 10,
     alignItems: 'center',
-  },
-  searchTextHeaders: {
-    // fontSize: 18,
   },
 });
