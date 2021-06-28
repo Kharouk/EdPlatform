@@ -10,28 +10,28 @@ If you have Expo installed on your phone, you can scan the QR code [here](https:
 
 ## Build for yourself
 
-#### Clone the app
+#### 1. Clone the app
 
 `git clone https://github.com/Kharouk/EdPlatform.git && cd EdPlatform`
 
-#### Install dependencies
+#### 2. Install dependencies
 
 `npm i` or `yarn`
 
-#### Run the app
+#### 3. Run the app
 
 `npm start` or `yarn start`
 
-#### If you have Expo Go on your mobile device, scan the barcode. Otherwise click **Run in web browser**
+#### 4. If you have Expo Go on your mobile device, scan the barcode. Otherwise click **Run in web browser**
 
-#### Run tests (tests can be found within the /utils directory)
+#### 5. Run tests (tests can be found within the /utils directory)
 
 `npm test`
 
 ## Approach
 
-- Enjoyed revisiting React Native after a long hiatus. Worked with React commercially for almost 3 years so thought I'd try to React Native instead for a bonus challenge.
-- Decided to keep it simple however and just use `Expo` as a way to build the application. Thought it would be easier to share as well once I finished the challenge.
+- Enjoyed revisiting React Native after a long hiatus. Worked with React commercially for almost 3 years so thought I'd try React Native instead for a bonus challenge.
+- Decided to keep it simple however and use `Expo` as a way to build the application. Thought it would be easier to share as well once I finished the challenge.
 - Implementing the logic was a faster process than designing the application, it was interesting to learn about React Native through their documentation and how the component hierarchy is structured.
 
 ## Improvements
@@ -42,11 +42,12 @@ Some things I would implement or improve if I had more time (which I wish I did 
 2. Engagement within the platform; creating accounts, favorite videos, comments, affecting the ratings
 3. Better GRID layout and more engaging UI
 4. Have the two search boxes work in unison so that you can search for a teacher name as well as get the tags of videos associated to that teacher
-5. Search by multiple tags at a time.
+5. Search by multiple tags at a time
 6. Relationships:
    - Building a relational structure that matches videos to teacher IDs
    - having a teachers page that shows all the related videos to that teacher
-7. Building all these components that are UI focused made me realise how important it would be to have a tool like **Storybook** to help use with testing purposes and faster development.
+7. Building all these components that are UI focused made me realise how important it would be to have a tool like **Storybook** to help use with testing purposes and faster development
+8. React Native UI testing; Function testing or E2E testing
 
 I would also eject from using Expo so that I was dealing with essentially the native versions for both Android and IOS. I would then use a potential cloud storage to handle potential authentication features.
 
