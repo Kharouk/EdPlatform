@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     marginHorizontal: 4,
     marginVertical: 6,
+    textAlign: 'center',
   },
   cardContent: {},
 });

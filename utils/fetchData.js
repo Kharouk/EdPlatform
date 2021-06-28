@@ -16,14 +16,12 @@ export const getTopRatedTutorialsForTags = (videos, searchTerm) => {
     .sort((a, b) => (a.averageUserRating > b.averageUserRating ? -1 : 1))
     .slice(0, 20);
 
-  console.log(top20VideosBasedOnTag);
   return top20VideosBasedOnTag;
 };
 
-export const searchForTutorials = (videos, searchTerm) => {
-  return videos.filter(
+export const searchForTutorials = (videos, searchTerm) =>
+  videos.filter(
     (video) =>
       video.videoTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
       video.teacherName.toLowerCase().includes(searchTerm.toLowerCase())
   );
-};

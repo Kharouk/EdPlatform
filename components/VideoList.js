@@ -20,16 +20,11 @@ const Item = ({ item }) => (
   </Card>
 );
 
-export default function VideoList({ videos, refresh, isRefreshing }) {
+export default function VideoList({ videos }) {
   return (
     <View style={styles.container}>
       <Text>The latest and greatest</Text>
-      <FlatList
-        data={videos}
-        renderItem={({ item }) => <Item item={item} />}
-        onRefresh={refresh}
-        refreshing={isRefreshing}
-      />
+      <FlatList data={videos} renderItem={({ item }) => <Item item={item} />} />
     </View>
   );
 }

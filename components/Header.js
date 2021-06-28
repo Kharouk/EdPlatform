@@ -6,24 +6,13 @@ export default function Header() {
   return (
     <View>
       <Text style={styles.header}>
-        Learn everything,{' '}
-        <span style={{ borderBottom: '1px solid black' }}>seriously.</span>
+        Learn everything, <Text style={styles.underline}>seriously.</Text>
       </Text>
       <Text style={styles.subheader}>
-        Built for Love and{' '}
-        <span style={{ color: '#5DCBFF', fontStyle: 'italic' }}>Lingumi</span>.
+        Built for Love and <Text style={styles.links}>Lingumi</Text>.
       </Text>
-      <Text style={{ paddingBottom: '10px', textAlign: 'center' }}>
-        By{' '}
-        <a
-          style={{
-            color: '#5DCBFF',
-            fontWeight: 'bold',
-          }}
-          href="https://github.com/kharouk"
-        >
-          Alex Kharouk
-        </a>
+      <Text style={{ paddingBottom: 10, textAlign: 'center' }}>
+        By <Text style={styles.links}>Alex Kharouk</Text>
       </Text>
       <Image source={headImage} style={{ width: 300, height: 200 }} />
     </View>
@@ -34,10 +23,20 @@ const styles = StyleSheet.create({
   header: {
     textAlign: 'center',
     fontSize: 28,
-    paddingTop: '5%',
+    paddingTop: '10%',
     paddingBottom: '5%',
   },
   subheader: {
     textAlign: 'center',
+  },
+  underline: {
+    borderBottomColor: 'black',
+    borderBottomWidth: 1,
+    paddingBottom: 2,
+    fontStyle: 'italic',
+  },
+  links: {
+    color: '#5DCBFF',
+    fontWeight: 'bold',
   },
 });
