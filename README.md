@@ -24,7 +24,7 @@ If you have Expo installed on your phone, you can scan the QR code [here](https:
 
 #### If you have Expo Go on your mobile device, scan the barcode. Otherwise click **Run in web browser**
 
-#### Run tests
+#### Run tests (tests can be found within the /utils directory)
 
 `npm test`
 
