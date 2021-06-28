@@ -6,7 +6,6 @@ import Card from './Card.js';
 const Item = ({ item }) => (
   <Card>
     <View style={styles.item}>
-      {console.log(item)}
       <Text style={{ fontSize: 22, color: 'white' }}>
         {item.videoTitle} by Teacher {item.teacherName}
       </Text>
